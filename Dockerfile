@@ -6,6 +6,8 @@ WORKDIR /lucidworks-view
 
 RUN npm install -g gulp bower
 RUN npm install
-RUN bower install
+RUN bower install --allow-root
 RUN npm run build
+
+ENTRYPOINT ["npm", "start"]
 
