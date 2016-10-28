@@ -4,6 +4,7 @@ RUN wget -qO- https://github.com/lucidworks/lucidworks-view/tarball/master | tar
 
 WORKDIR /lucidworks-view
 
+RUN npm install -g gulp bower
 RUN npm install
 RUN bower install
 RUN npm run build
