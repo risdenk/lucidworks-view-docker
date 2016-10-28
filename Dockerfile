@@ -9,6 +9,8 @@ RUN npm install
 RUN bower install --allow-root
 RUN npm run build
 
+COPY FUSION_CONFIG.js /lucidworks-view/FUSION_CONFIG.js
+
 EXPOSE 3000
 ENTRYPOINT ["npm", "start"]
 
